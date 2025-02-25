@@ -1,7 +1,7 @@
-const nome = "Carlos";
-const canal = "CFB Cursos";
-const curso = "Typescript";
+const vnome = "Carlos";
+const vcanal = "CFB Cursos";
+const vcurso = "Typescript";
 
-console.log(nome);
-console.log(canal);
-console.log(curso);
+console.log(vnome);
+console.log(vcanal);
+console.log(vcurso);
