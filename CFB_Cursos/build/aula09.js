@@ -20,5 +20,14 @@ var cores;
     cores["azul"] = "#00f";
 })(cores || (cores = {}));
 ;
-console.log(cores.branco);
-console.log(cores['azul']);
+var tipoUsuario;
+(function (tipoUsuario) {
+    tipoUsuario[tipoUsuario["user"] = 0] = "user";
+    tipoUsuario[tipoUsuario["admin"] = 1] = "admin";
+    tipoUsuario[tipoUsuario["super"] = 2] = "super";
+})(tipoUsuario || (tipoUsuario = {}));
+;
+let tp = 1;
+let tb = tipoUsuario.super;
+console.log(tp);
+console.log(tb);

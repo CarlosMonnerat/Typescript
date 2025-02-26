@@ -26,5 +26,19 @@ enum cores{
     azul = "#00f"
 };
 
-console.log(cores.branco);
-console.log(cores['azul']);
+// console.log(cores.branco);
+// console.log(cores['azul']);
+
+enum tipoUsuario{
+    user,
+    admin,
+    super
+};
+
+//console.log(tipoUsuario.super);
+
+let tp: tipoUsuario = 1;
+let tb: tipoUsuario = tipoUsuario.super;
+
+console.log(tp);
+console.log(tb);
