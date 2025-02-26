@@ -5,3 +5,4 @@ numeros.unshift(5);
 numeros.pop();
 numeros.shift();
 console.log(numeros);
+let numeros_ro = [100, 200, 300];
