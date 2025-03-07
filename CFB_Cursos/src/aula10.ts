@@ -1,5 +1,10 @@
 //NULL - UNDEFINED - UNKNOWN
 
-let nnome: string | null;
-nnome = null;
-console.log(nnome);
+//NULL
+let nNome: string | null; 
+nNome = null;
+console.log(nNome);
+
+//UNDEFINED
+let undNome;
+console.log(undNome);
