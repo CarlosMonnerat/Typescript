@@ -1,0 +1,13 @@
+"use strict";
+let valor_1;
+let valor_2;
+let valor_3;
+valor_3 = 10;
+valor_1 = valor_3;
+valor_2 = valor_3;
+console.log(typeof (valor_3));
+console.log(valor_3);
+console.log(typeof (valor_1));
+console.log(valor_1);
+console.log(typeof (valor_2));
+console.log(valor_2);
