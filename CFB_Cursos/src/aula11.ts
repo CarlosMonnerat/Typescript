@@ -1,19 +1,19 @@
 // TYPE ASSERTION
-let valor_1: number;
-let valor_2: string;
-let valor_3: unknown;
+let num: number;
+let stri: string;
+let unk: unknown;
 
-valor_3 = 10;
+unk = 10;
 
-//Type Assertion - Permite associar uma variável do tipo qualquer à um outo tipo de variável
-valor_1 = <number>valor_3;
-valor_2 = <string>valor_3;
+//Type Assertion - Permite associar uma variável de 'tipo qualquer' à um outo tipo de variável
+num = <number> unk;
+stri = <string> unk;
 
-console.log(typeof(valor_3));
-console.log(valor_3);
+console.log(typeof(unk));
+console.log(unk);
 
-console.log(typeof(valor_1));
-console.log(valor_1);
+console.log(typeof(num));
+console.log(num);
 
-console.log(typeof(valor_2));
-console.log(valor_2);
+console.log(typeof(stri));
+console.log(stri);
