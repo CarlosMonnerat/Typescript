@@ -7,4 +7,4 @@ function fsoma(...n) {
     return s;
 }
 ;
-console.log(fsoma(10, 20, 30, 40, 100));
+console.log(fsoma(10, 20, 30, 40, 100, 700, 150));
