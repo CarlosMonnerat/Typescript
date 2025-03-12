@@ -1,15 +1,15 @@
 //P.O.O Classes
 
-class Computador {
+class Comput {
     nome: string = "";
     ram: number = 0;
     cpu: number = 0;
     ligado: boolean = false;
 };
 
-const c1 = new Computador();
-const c2 = new Computador();
-const c3 = new Computador();
+const c1 = new Comput();
+const c2 = new Comput();
+const c3 = new Comput();
 
 c1.nome = "Rapidão";
 c2.nome = "Carão";
