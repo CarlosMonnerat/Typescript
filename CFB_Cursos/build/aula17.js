@@ -1,5 +1,5 @@
 "use strict";
-class Computador {
+class Computa {
     nome;
     ram;
     cpu;
@@ -12,9 +12,9 @@ class Computador {
     }
 }
 ;
-const comp1 = new Computador("Rapidão", 64, 10);
-const comp2 = new Computador("Carão", 32, 5);
-const comp3 = new Computador("Gamer", 128, 10);
-console.log(comp1);
-console.log(comp2);
-console.log(comp3);
+const comput1 = new Computa("Rapidão", 64, 10);
+const comput2 = new Computa("Carão", 32, 5);
+const comput3 = new Computa("Gamer", 128, 10);
+console.log(comput1);
+console.log(comput2);
+console.log(comput3);
