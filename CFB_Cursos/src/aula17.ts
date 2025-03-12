@@ -1,23 +1,25 @@
 //P.O.O Classes - Método Construtor
 
 class Computador {
-    nome: string = "Computador 1";
-    ram: number = 0;
-    cpu: number = 0;
-    ligado: boolean = false;
+    nome: string;
+    ram: number;
+    cpu: number;
+    ligado: boolean;
 
-    constructor(n: string){
+    constructor(n: string, r: number, c: number){
         this.nome = n;          //'this' se refere à classe 'Computador'
-        console.log("Novo computador criado");
+        this.ram = r;
+        this.cpu = c;
+        this.ligado = false;
     }
 };
 
 //Instanciar
-const comp1 = new Computador("Rapidão");
-const comp2 = new Computador("Carão");
-const comp3 = new Computador("gamer");
+const comp1 = new Computador("Rapidão", 64, 10);
+const comp2 = new Computador("Carão", 32, 5);
+const comp3 = new Computador("Gamer", 128, 10);
 
 
-console.log(comp1.nome);
-console.log(comp2.nome);
-console.log(comp3.nome);
+console.log(comp1);
+console.log(comp2);
+console.log(comp3);

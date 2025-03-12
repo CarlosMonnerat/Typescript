@@ -1,18 +1,20 @@
 "use strict";
 class Computador {
-    nome = "Computador 1";
-    ram = 0;
-    cpu = 0;
-    ligado = false;
-    constructor(n) {
+    nome;
+    ram;
+    cpu;
+    ligado;
+    constructor(n, r, c) {
         this.nome = n;
-        console.log("Novo computador criado");
+        this.ram = r;
+        this.cpu = c;
+        this.ligado = false;
     }
 }
 ;
-const comp1 = new Computador("Rapidão");
-const comp2 = new Computador("Carão");
-const comp3 = new Computador("gamer");
-console.log(comp1.nome);
-console.log(comp2.nome);
-console.log(comp3.nome);
+const comp1 = new Computador("Rapidão", 64, 10);
+const comp2 = new Computador("Carão", 32, 5);
+const comp3 = new Computador("Gamer", 128, 10);
+console.log(comp1);
+console.log(comp2);
+console.log(comp3);
