@@ -28,6 +28,15 @@ class Computador {
     desligar(): void {
         this.ligado = false;
     }
+
+    upRam(qtde: number): void{
+        if(qtde >= 0 && qtde <= 1000){
+            this.ram = qtde;
+        }else{
+            console.log(`Quantidade ${qtde} para o computador '${this.nome}' não é permitida`);
+        }
+        
+    }
 };
 
 //Instanciar
@@ -36,9 +45,12 @@ const comp2 = new Computador("Carão", 32, 5);
 const comp3 = new Computador("Gamer", 128, 10);
 
 comp1.ligar();
-// comp2.ligado = true; //Não é possível acessar à propriedade 'ligado' fora da Classe, pois ela foi definida como 'private'
 comp3.ligar();
 comp1.desligar();
+
+// comp2.ligado = true; //Não é possível acessar à propriedade 'ligado' fora da Classe, pois ela foi definida como 'private'
+comp1.nome = "Super Rápido";
+comp1.upRam(128);
 
 
 comp1.info();
