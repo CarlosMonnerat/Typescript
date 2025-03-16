@@ -32,7 +32,7 @@ class Conta {
     };
 
     protected saque(valor: number) {
-        if(valor >= this.saldoConta){
+        if(valor <= this.saldoConta){
             this.saldoConta -= valor;
         }else{
             console.log(`Saldo insuficiente`);
@@ -63,6 +63,15 @@ class ContaPF extends Conta {
             console.log(`Depósito realizado com sucesso`);
         }
     };
+
+    public saque(valor: number) {
+        if(valor > 1000){
+            console.log(`Valor muito alto para este tipo de conta`);
+        }else{
+            super.saque(valor);
+            console.log(`Saque realizado com sucesso`);
+        }
+    };
 };
 
 class ContaPJ extends Conta {
@@ -87,6 +96,15 @@ class ContaPJ extends Conta {
             console.log(`Depósito realizado com sucesso`);
         }
     };
+
+    public saque(valor: number) {
+        if(valor > 10000){
+            console.log(`Valor muito alto para este tipo de conta`);
+        }else{
+            super.saque(valor);
+            console.log(`Saque realizado com sucesso`);
+        }
+    };
 }
 
 const conta1 = new ContaPF(1111111,"Carlos");
@@ -96,10 +114,15 @@ const conta2 = new ContaPJ(2222222,"CFBCursos");
 // conta1.deposito(800);
 // console.log(conta1.saldo());
 
-conta2.deposito(5000);
-conta2.deposito(10000);
+// conta2.deposito(5000);
+//conta2.deposito(10000);
 conta2.deposito(2000);
 console.log(conta2.saldo());
+console.log("---------------");
+conta2.saque(500);
+console.log(conta2.saldo());
+
+
 
 // conta1.info();
 // conta2.info();
