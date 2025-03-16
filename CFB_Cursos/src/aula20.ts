@@ -10,3 +10,12 @@ class Conta {
     };
 };
 
+//Herança
+class ContaPF extends Conta {
+
+}
+
+const conta1 = new ContaPF(123456789, "Carlos");
+
+
+//console.log(conta1);

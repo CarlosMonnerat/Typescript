@@ -9,3 +9,6 @@ class Conta {
     ;
 }
 ;
+class ContaPF extends Conta {
+}
+const conta1 = new ContaPF(123456789, "Carlos");
