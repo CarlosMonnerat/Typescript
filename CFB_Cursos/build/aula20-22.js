@@ -11,6 +11,11 @@ class Conta {
         return Math.floor(Math.random() * 100000) + 1;
     }
     ;
+    info() {
+        console.log(`Titular: ${this.titular}`);
+        console.log(`Número: ${this.numero}`);
+        console.log(`--------------------------`);
+    }
 }
 ;
 class ContaPF extends Conta {
@@ -33,3 +38,4 @@ class ContaPJ extends Conta {
     ;
 }
 const conta1 = new ContaPF(1111111, "Carlos");
+const conta2 = new ContaPJ(2222222, "CFBCursos");

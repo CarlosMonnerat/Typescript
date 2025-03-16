@@ -12,6 +12,12 @@ class Conta {
     private gerarNumeroConta(): number {
         return Math.floor(Math.random()*100000)+1;
     };
+
+    info() {
+        console.log(`Titular: ${this.titular}`);
+        console.log(`Número: ${this.numero}`);
+        console.log(`--------------------------`);
+    }
 };
 
 //Classes filhas da Classe Conta
@@ -35,4 +41,7 @@ class ContaPJ extends Conta {
 }
 
 const conta1 = new ContaPF(1111111,"Carlos");
-//const conta2 = new ContaPJ(2222222,"CFBCursos");
+const conta2 = new ContaPJ(2222222,"CFBCursos");
+
+// conta1.info();
+// conta2.info();
