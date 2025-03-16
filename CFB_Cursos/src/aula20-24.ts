@@ -28,10 +28,18 @@ class Conta {
     };
 
     protected deposito(valor: number) {
+        if(valor < 0){
+            console.log(`Valor Inválido`);
+            return;
+        }
         this.saldoConta += valor;
     };
 
     protected saque(valor: number) {
+        if(valor < 0){
+            console.log(`Valor Inválido`);
+            return;
+        }
         if(valor <= this.saldoConta){
             this.saldoConta -= valor;
         }else{
@@ -110,17 +118,20 @@ class ContaPJ extends Conta {
 const conta1 = new ContaPF(1111111,"Carlos");
 const conta2 = new ContaPJ(2222222,"CFBCursos");
 
-// conta1.deposito(500);
-// conta1.deposito(800);
-// console.log(conta1.saldo());
+conta1.deposito(200);
+conta1.deposito(800);
+conta1.deposito(1000);
+conta1.saque(1000);
+console.log(conta1.saldo());
+
+console.log("---------------");
 
 // conta2.deposito(5000);
-//conta2.deposito(10000);
-conta2.deposito(2000);
-console.log(conta2.saldo());
-console.log("---------------");
-conta2.saque(500);
-console.log(conta2.saldo());
+// conta2.deposito(10000);
+// conta2.deposito(2000);
+// console.log(conta2.saldo());
+// conta2.saque(5000);
+// console.log(conta2.saldo());
 
 
 
