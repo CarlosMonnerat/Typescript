@@ -6,10 +6,12 @@
 class Conta {
     protected numero: number;
     protected titular: string;
+    private saldoConta: number;
     
     constructor(titular: string) {
         this.numero = this.gerarNumeroConta();
         this.titular = titular;
+        this.saldoConta = 0;
     };
 
     private gerarNumeroConta(): number {
@@ -19,7 +21,23 @@ class Conta {
     protected info() {
         console.log(`Titular: ${this.titular}`);
         console.log(`Número.: ${this.numero}`);
-    }
+    };
+
+    public saldo(): number {
+        return this.saldoConta;
+    };
+
+    protected deposito(valor: number) {
+        this.saldoConta += valor;
+    };
+
+    protected saque(valor: number) {
+        if(valor >= this.saldoConta){
+            this.saldoConta -= valor;
+        }else{
+            console.log(`Saldo insuficiente`);
+        }       
+    };
 };
 
 //Classes filhas da Classe Conta
@@ -54,5 +72,7 @@ class ContaPJ extends Conta {
 const conta1 = new ContaPF(1111111,"Carlos");
 const conta2 = new ContaPJ(2222222,"CFBCursos");
 
-conta1.info();
-conta2.info();
+console.log(conta1.saldo());
+
+// conta1.info();
+// conta2.info();

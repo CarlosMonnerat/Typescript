@@ -2,9 +2,11 @@
 class Conta {
     numero;
     titular;
+    saldoConta;
     constructor(titular) {
         this.numero = this.gerarNumeroConta();
         this.titular = titular;
+        this.saldoConta = 0;
     }
     ;
     gerarNumeroConta() {
@@ -15,6 +17,24 @@ class Conta {
         console.log(`Titular: ${this.titular}`);
         console.log(`Número.: ${this.numero}`);
     }
+    ;
+    saldo() {
+        return this.saldoConta;
+    }
+    ;
+    deposito(valor) {
+        this.saldoConta += valor;
+    }
+    ;
+    saque(valor) {
+        if (valor >= this.saldoConta) {
+            this.saldoConta -= valor;
+        }
+        else {
+            console.log(`Saldo insuficiente`);
+        }
+    }
+    ;
 }
 ;
 class ContaPF extends Conta {
@@ -48,5 +68,4 @@ class ContaPJ extends Conta {
 }
 const conta1 = new ContaPF(1111111, "Carlos");
 const conta2 = new ContaPJ(2222222, "CFBCursos");
-conta1.info();
-conta2.info();
+console.log(conta1.saldo());
