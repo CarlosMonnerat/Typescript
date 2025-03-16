@@ -1,4 +1,7 @@
 // HERANÇA
+    //Public: Acessado de qualquer lugar
+    //Private: Acessado somente na sua própria classe
+    //Protected: Acessado somente na sua própria classe e nas classes filhas
 
 class Conta {
     protected numero: number;
@@ -13,10 +16,9 @@ class Conta {
         return Math.floor(Math.random()*100000)+1;
     };
 
-    info() {
+    protected info() {
         console.log(`Titular: ${this.titular}`);
-        console.log(`Número: ${this.numero}`);
-        console.log(`--------------------------`);
+        console.log(`Número.: ${this.numero}`);
     }
 };
 
@@ -26,9 +28,13 @@ class ContaPF extends Conta {
     constructor(cpf: number, titular: string) {
         super(titular);           // 'super' faz referência ao constructor da classe pai. Repassa os parâmetros para a Classe Pai
         this.cpf = cpf;
-        console.log(`Conta PF criada: ${titular}`); //'titular' pode ser acessada pela classe filha por ser do tipo 'protected'
-        
     };
+    info(){
+        console.log(`Tipo...: Pessoa Física`);
+        super.info();
+        console.log(`CPF....: ${this.cpf}`);
+        console.log(`--------------------------`);
+    }
 };
 
 class ContaPJ extends Conta {
@@ -36,12 +42,17 @@ class ContaPJ extends Conta {
     constructor(cnpj: number,titular: string) {
         super(titular);
         this.cnpj = cnpj;
-        console.log(`Conta PJ criada: ${this.titular}`); 
     };
+    info(){
+        console.log(`Tipo...: Pessoa Jurídica`);
+        super.info();
+        console.log(`CNPJ...: ${this.cnpj}`);
+        console.log(`--------------------------`);
+    }
 }
 
 const conta1 = new ContaPF(1111111,"Carlos");
 const conta2 = new ContaPJ(2222222,"CFBCursos");
 
-// conta1.info();
-// conta2.info();
+conta1.info();
+conta2.info();
