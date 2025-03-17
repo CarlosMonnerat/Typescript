@@ -18,8 +18,12 @@ class Contas {
         console.log(`Número.: ${this.numero}`);
     }
     ;
-    saldo() {
+    get saldo() {
         return this.saldoConta;
+    }
+    ;
+    set saldo(saldoConta) {
+        this.saldoConta = saldoConta;
     }
     ;
     deposito(valor) {
@@ -27,7 +31,7 @@ class Contas {
             console.log(`Valor Inválido`);
             return;
         }
-        this.saldoConta += valor;
+        this.saldo += valor;
         console.log(`Depósito realizado com sucesso`);
     }
     ;
@@ -37,7 +41,7 @@ class Contas {
             return;
         }
         if (valor <= this.saldoConta) {
-            this.saldoConta -= valor;
+            this.saldo -= valor;
             console.log(`Saque realizado com sucesso`);
         }
         else {
@@ -47,7 +51,7 @@ class Contas {
     ;
 }
 ;
-class Cont_PF extends Conta {
+class Cont_PF extends Contas {
     cpf;
     constructor(cpf, titular) {
         super(titular);
@@ -81,7 +85,7 @@ class Cont_PF extends Conta {
     ;
 }
 ;
-class Cont_PJ extends Conta {
+class Cont_PJ extends Contas {
     cnpj;
     constructor(cnpj, titular) {
         super(titular);
@@ -116,3 +120,7 @@ class Cont_PJ extends Conta {
 }
 const conta3 = new Cont_PF(1111111, "Carlos");
 const conta4 = new Cont_PJ(2222222, "CFBCursos");
+conta3.deposito(800);
+conta3.deposito(500);
+conta3.deposito(700);
+console.log(conta3.saldo);

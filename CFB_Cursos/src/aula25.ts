@@ -20,8 +20,12 @@ class Contas {
         console.log(`Número.: ${this.numero}`);
     };
 
-    public saldo(): number {
+    get saldo(): number {       //'GETTER' permite que o método possa ser acessado como uma propriedade e não como função
         return this.saldoConta;
+    };
+
+    private set saldo(saldoConta: number) { // 'SETTER' permite setar um valor para uma variável
+        this.saldoConta = saldoConta;
     };
 
     protected deposito(valor: number) {
@@ -29,7 +33,7 @@ class Contas {
             console.log(`Valor Inválido`);
             return;
         }
-        this.saldoConta += valor;
+        this.saldo += valor;
         console.log(`Depósito realizado com sucesso`);
     };
 
@@ -39,7 +43,7 @@ class Contas {
             return;
         }
         if(valor <= this.saldoConta){
-            this.saldoConta -= valor;
+            this.saldo -= valor;
             console.log(`Saque realizado com sucesso`);
         }else{
             console.log(`Saldo insuficiente`);
@@ -48,7 +52,7 @@ class Contas {
 };
 
 //Classes filhas da Classe Contas
-class Cont_PF extends Conta {
+class Cont_PF extends Contas {
     cpf: number;
     constructor(cpf: number, titular: string) {
         super(titular);           // 'super' faz referência ao constructor da classe pai. Repassa os parâmetros para a Classe Pai
@@ -79,7 +83,7 @@ class Cont_PF extends Conta {
     };
 };
 
-class Cont_PJ extends Conta {
+class Cont_PJ extends Contas {
     cnpj: number;
     constructor(cnpj: number,titular: string) {
         super(titular);
@@ -114,3 +118,8 @@ const conta3 = new Cont_PF(1111111,"Carlos");
 const conta4 = new Cont_PJ(2222222,"CFBCursos");
 
 
+conta3.deposito(800);
+conta3.deposito(500);
+conta3.deposito(700);
+
+console.log(conta3.saldo); //Saldo acessado como uma propriedade e não como método
