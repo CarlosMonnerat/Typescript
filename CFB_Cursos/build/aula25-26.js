@@ -124,3 +124,4 @@ conta3.deposito(800);
 conta3.deposito(500);
 conta3.deposito(700);
 console.log(conta3.saldo);
+conta3.info();

@@ -2,7 +2,7 @@
 //Classes Abstratas
 
 abstract class Contas {     // 'abstract' indica que a classe funciona apenas como base, e não pode ser criado um obj dessa Classe
-    protected numero: number;
+    private readonly numero: number;
     protected titular: string;
     private saldoConta: number;
     
@@ -125,3 +125,5 @@ conta3.deposito(500);
 conta3.deposito(700);
 
 console.log(conta3.saldo); //Saldo acessado como uma propriedade e não como método
+
+conta3.info();
