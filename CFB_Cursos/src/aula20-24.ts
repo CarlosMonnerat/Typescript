@@ -33,6 +33,7 @@ class Conta {
             return;
         }
         this.saldoConta += valor;
+        console.log(`Depósito realizado com sucesso`);
     };
 
     protected saque(valor: number) {
@@ -42,6 +43,7 @@ class Conta {
         }
         if(valor <= this.saldoConta){
             this.saldoConta -= valor;
+            console.log(`Saque realizado com sucesso`);
         }else{
             console.log(`Saldo insuficiente`);
         }       
@@ -68,7 +70,6 @@ class ContaPF extends Conta {
             console.log(`Valor muito alto para este tipo de conta`);
         }else{
             super.deposito(valor);
-            console.log(`Depósito realizado com sucesso`);
         }
     };
 
@@ -77,7 +78,6 @@ class ContaPF extends Conta {
             console.log(`Valor muito alto para este tipo de conta`);
         }else{
             super.saque(valor);
-            console.log(`Saque realizado com sucesso`);
         }
     };
 };
@@ -101,7 +101,6 @@ class ContaPJ extends Conta {
             console.log(`Valor muito alto para este tipo de conta`);
         }else{
             super.deposito(valor);
-            console.log(`Depósito realizado com sucesso`);
         }
     };
 
@@ -110,7 +109,6 @@ class ContaPJ extends Conta {
             console.log(`Valor muito alto para este tipo de conta`);
         }else{
             super.saque(valor);
-            console.log(`Saque realizado com sucesso`);
         }
     };
 }
@@ -118,20 +116,27 @@ class ContaPJ extends Conta {
 const conta1 = new ContaPF(1111111,"Carlos");
 const conta2 = new ContaPJ(2222222,"CFBCursos");
 
-conta1.deposito(200);
-conta1.deposito(800);
-conta1.deposito(1000);
-conta1.saque(1000);
-console.log(conta1.saldo());
+// conta1.deposito(200);
+// conta1.deposito(800);
+// conta1.deposito(1000);
+// conta1.saque(1000);
+// conta1.saque(500);
+// conta1.saque(500);
+// conta1.saque(50);
+// console.log(conta1.saldo());
 
+
+
+conta2.deposito(-5000);
+conta2.deposito(10000);
+conta2.deposito(5000);
+console.log(conta2.saldo());
 console.log("---------------");
-
-// conta2.deposito(5000);
-// conta2.deposito(10000);
-// conta2.deposito(2000);
-// console.log(conta2.saldo());
 // conta2.saque(5000);
-// console.log(conta2.saldo());
+// conta2.saque(5000);
+// conta2.saque(10000);
+conta2.saque(1000);
+console.log(conta2.saldo());
 
 
 
