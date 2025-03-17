@@ -1,6 +1,7 @@
 // Métodos GETTER e SETTER
+//Classes Abstratas
 
-class Contas {
+abstract class Contas {     // 'abstract' indica que a classe funciona apenas como base, e não pode ser criado um obj dessa Classe
     protected numero: number;
     protected titular: string;
     private saldoConta: number;
@@ -116,6 +117,7 @@ class Cont_PJ extends Contas {
 
 const conta3 = new Cont_PF(1111111,"Carlos");
 const conta4 = new Cont_PJ(2222222,"CFBCursos");
+//const conta5 = new Contas ("Clark");  //Nao pode ser instanciada, pois a Classe 'Contas' é abstrata
 
 
 conta3.deposito(800);
