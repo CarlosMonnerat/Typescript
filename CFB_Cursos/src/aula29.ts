@@ -1,7 +1,20 @@
 // GENERICS
 
-function f_teste(v: number): number {
-    return v;
+//Permite que a função receba qualquer tipo de parâmetro
+function f_teste<T, U>(v: T, r: U): U {
+    return r;
 };
 
-console.log(f_teste(10));
+console.log(f_teste<number, string>(10, "K"));
+console.log(f_teste<string, number>("Carlos", 100));
+console.log(f_teste<boolean, boolean>(true, false));
+
+//Generic em uma classe
+class C_teste<T>{
+    public valor: T;
+
+    constructor(valor: T){
+        this.valor = valor;
+    }
+};
+
