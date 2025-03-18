@@ -7,11 +7,21 @@ interface curso {
     inicarCurso ?(teste: string): void;
  };
 
- 
+ //Interfaces filhas
+ interface cursoProg extends curso {
+    numAula: number;
+    maxAlunos ?: number;
 
- let curso_4: curso;
- let curso_5: curso;
- let curso_6: curso;
+ };
+
+ interface cursoArtes extends curso {
+    numAula: number;
+    maxAlunos ?: number;
+ };
+
+ let curso_4: cursoProg;
+ let curso_5: cursoProg;
+ let curso_6: cursoArtes;
 
 
  curso_4 = { titulo: "TypeScript", des: "Curso de Typescript para iniciantes", numAula: 100, maxAlunos: 50, inicarCurso(t: string){}};
