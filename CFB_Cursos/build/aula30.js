@@ -6,3 +6,4 @@ const p2 = new Classes_1.Objeto("Mesa");
 console.log(p1.nome);
 console.log(p1.altura);
 console.log(p2.nome);
+console.log(Classes_1.Coisas);
