@@ -32,6 +32,3 @@ var Motores;
     ;
 })(Motores || (Motores = {}));
 ;
-const carro1 = new Veiculos.Carro("Rapido");
-console.log(carro1.nome);
-console.log(carro1.motor);
