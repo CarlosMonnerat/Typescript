@@ -1,6 +1,6 @@
 //NAMESPACE
 namespace Veiculos{
-    export class Carro{
+    export abstract class Carro{
         nome: string;
         motor: Motores.Motor;
         constructor(nome: string){
