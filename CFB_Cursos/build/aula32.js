@@ -38,7 +38,12 @@ var Veiculos;
             return this.motor.potencia;
         }
     }
-    Veiculos.Carro = Carro;
+    class CarroEsportivo extends Carro {
+        constructor(nome, cor) {
+            super(nome, new Motores.Motor(6, 300), 2);
+        }
+    }
+    Veiculos.CarroEsportivo = CarroEsportivo;
 })(Veiculos || (Veiculos = {}));
 ;
 var Motores;

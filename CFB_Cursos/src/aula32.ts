@@ -1,7 +1,7 @@
 //NAMESPACE
 namespace Veiculos{
     enum Cores{"Preto","Branco","Vermelho","Amarelo","Azul","Prata"}
-    export abstract class Carro{
+    abstract class Carro{
         private nome: string;
         private motor: Motores.Motor;
         private cor: string;
@@ -27,6 +27,12 @@ namespace Veiculos{
         }
         get minhaPotencia(){
             return this.motor.potencia;
+        }
+    }
+
+    export class CarroEsportivo extends Carro{
+        constructor(nome: string, cor: Cores){
+            super(nome, new Motores.Motor(6, 300), 2);
         }
     }
 };
@@ -61,4 +67,5 @@ namespace Motores{
         }
     }
 };
+
 
