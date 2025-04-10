@@ -1,12 +1,23 @@
 "use strict";
 var Veiculos;
 (function (Veiculos) {
+    let Cores;
+    (function (Cores) {
+        Cores[Cores["Preto"] = 0] = "Preto";
+        Cores[Cores["Branco"] = 1] = "Branco";
+        Cores[Cores["Vermelho"] = 2] = "Vermelho";
+        Cores[Cores["Amarelo"] = 3] = "Amarelo";
+        Cores[Cores["Azul"] = 4] = "Azul";
+        Cores[Cores["Prata"] = 5] = "Prata";
+    })(Cores || (Cores = {}));
     class Carro {
         nome;
         motor;
-        constructor(nome) {
+        cor;
+        constructor(nome, motor, cor) {
             this.nome = nome;
-            this.motor = new Motores.Motor(3, 100);
+            this.motor = motor;
+            this.cor = cor;
         }
     }
     Veiculos.Carro = Carro;

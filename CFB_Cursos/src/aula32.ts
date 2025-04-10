@@ -1,11 +1,14 @@
 //NAMESPACE
 namespace Veiculos{
+    enum Cores{"Preto","Branco","Vermelho","Amarelo","Azul","Prata"}
     export abstract class Carro{
         nome: string;
         motor: Motores.Motor;
-        constructor(nome: string){
+        cor: Cores;
+        constructor(nome: string, motor: Motores.Motor, cor: Cores){
             this.nome = nome;
-            this.motor = new Motores.Motor(3, 100);
+            this.motor = motor;
+            this.cor = cor;
         }
     }
 };
