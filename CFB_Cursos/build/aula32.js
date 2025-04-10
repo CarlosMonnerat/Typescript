@@ -17,7 +17,25 @@ var Veiculos;
         constructor(nome, motor, cor) {
             this.nome = nome;
             this.motor = motor;
-            this.cor = cor;
+            this.cor = Cores[cor];
+        }
+        ligar() {
+            this.motor.liga = true;
+        }
+        desligar() {
+            this.motor.liga = false;
+        }
+        get minhaCor() {
+            return this.cor;
+        }
+        get meuNome() {
+            return this.nome;
+        }
+        get estouLigado() {
+            return (this.motor.liga ? "Sim" : "Não");
+        }
+        get minhaPotencia() {
+            return this.motor.potencia;
         }
     }
     Veiculos.Carro = Carro;
