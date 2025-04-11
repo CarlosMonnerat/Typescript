@@ -21,5 +21,6 @@ const obj = {
     cor1: "preto",
     cor2: "rosa",
     cor3: "roxo",
-    cor4: "branco",
+    cor4: "branco"
 };
+let { cor1, cor2, cor3, cor4 } = obj;
