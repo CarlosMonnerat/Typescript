@@ -17,3 +17,9 @@ console.log(i);
 console.log(j);
 console.log(k);
 console.log(l);
+const obj = {
+    cor1: "preto",
+    cor2: "rosa",
+    cor3: "roxo",
+    cor4: "branco",
+};

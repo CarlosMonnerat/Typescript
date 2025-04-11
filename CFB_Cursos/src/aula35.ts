@@ -1,5 +1,6 @@
 //DESESTRUTURAÇÃO
 
+//Desestruturação com Arrays
 let av = [10,20,30,40];
 
 //Sem desestruturação:
@@ -32,3 +33,13 @@ console.log(i);
 console.log(j);
 console.log(k);
 console.log(l);
+
+//Desestruturação com Objetos
+const obj = {
+    cor1: "preto",
+    cor2: "rosa",
+    cor3: "roxo",
+    cor4: "branco",
+};
+
+//let [m, n, o, p] = obj; // Vai dar erro pois estamos desestruturando um obj em um array
