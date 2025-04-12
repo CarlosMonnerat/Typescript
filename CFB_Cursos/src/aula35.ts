@@ -44,3 +44,5 @@ const obj = {
 
 //let [m, n, o, p] = obj; // Vai dar erro pois estamos desestruturando um obj em um array
 let {cor1, cor2, cor3, cor4} = obj;
+
+let [nu1, nu2=0, nu3=0] = [10];

@@ -24,3 +24,4 @@ const obj = {
     cor4: "branco"
 };
 let { cor1, cor2, cor3, cor4 } = obj;
+let [nu1, nu2 = 0, nu3 = 0] = [10];
