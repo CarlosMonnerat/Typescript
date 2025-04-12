@@ -69,3 +69,13 @@ console.log(b2);
 console.log(b3);
 console.log(b4);
 console.log("---------------");
+
+//Desestruturação de uma String
+let stexto = "Curso de Typescript";
+let [...t] = stexto.split(" ");
+let [p1, p2, p3] = stexto.split(" ");
+
+console.log(t);
+console.log(p1);
+console.log(p2);
+console.log(p3);
