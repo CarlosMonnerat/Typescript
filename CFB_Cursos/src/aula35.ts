@@ -33,6 +33,7 @@ console.log(i);
 console.log(j);
 console.log(k);
 console.log(l);
+console.log("---------------");
 
 //Desestruturação com Objetos
 const obj = {
@@ -45,4 +46,26 @@ const obj = {
 //let [m, n, o, p] = obj; // Vai dar erro pois estamos desestruturando um obj em um array
 let {cor1, cor2, cor3, cor4} = obj;
 
+//Destruturação com valores padrão
 let [nu1, nu2=0, nu3=0] = [10];
+
+    //Spread
+        //nesse caso as variaveis nu4 e nu5 vão receber 10 e 20 respectivamente, enquando nu6 receberá um array com todos outro valores
+let [nu4, nu5, ...nu6] = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100]; 
+
+console.log(nu4);
+console.log(nu5);
+console.log(nu6);
+console.log("---------------");
+
+//Destruturação em uma função que retorna um array
+const fcores=()=>{
+    return ["verde", "amarelo","azul","branco", "preto", "roxo", "rosa"]
+};
+
+let [b1, b2, b3, ...b4] = fcores();
+console.log(b1);
+console.log(b2);
+console.log(b3);
+console.log(b4);
+console.log("---------------");

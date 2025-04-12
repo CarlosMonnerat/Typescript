@@ -17,6 +17,7 @@ console.log(i);
 console.log(j);
 console.log(k);
 console.log(l);
+console.log("---------------");
 const obj = {
     cor1: "preto",
     cor2: "rosa",
@@ -25,3 +26,17 @@ const obj = {
 };
 let { cor1, cor2, cor3, cor4 } = obj;
 let [nu1, nu2 = 0, nu3 = 0] = [10];
+let [nu4, nu5, ...nu6] = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100];
+console.log(nu4);
+console.log(nu5);
+console.log(nu6);
+console.log("---------------");
+const fcores = () => {
+    return ["verde", "amarelo", "azul", "branco", "preto", "roxo", "rosa"];
+};
+let [b1, b2, b3, ...b4] = fcores();
+console.log(b1);
+console.log(b2);
+console.log(b3);
+console.log(b4);
+console.log("---------------");
