@@ -14,7 +14,10 @@
 export default function Home() {
   return (
     <main>
-      
+      <div>CFB Cursos</div>
+      <div>Curso de React</div>
+      <div>TypeScript</div>
+      <div>Next jS</div>
     </main>
   );
 }
