@@ -2,8 +2,5 @@
 @tailwind base;
 @tailwind components; */
 @import "tailwindcss";
+@import "./topo.css";
 
-.subtitulo{
-    color: #00f;
-    font-weight: bold;
-}
