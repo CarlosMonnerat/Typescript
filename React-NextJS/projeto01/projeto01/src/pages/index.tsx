@@ -11,18 +11,22 @@
 //   subsets: ["latin"],
 // });
 
-const nome = 'Carlos Quintanilha'
-let canal = 'CFBCursos'
+const nome = 'Carlos Quintanilha';
+let canal = 'CFBCursos';
+
+function Topo(){
+  return (
+    <div>
+      <div>Logo</div>
+      <div>{canal}</div>
+      <div>{nome}</div>
+    </div>
+  );
+}
 
 export default function Home() {
-  function retnome(){
-    return nome
-  }
-  
   return (
     <main>
-      <div>{retnome()}</div>
-      <div>{canal}</div>
       <div>Curso de React</div>
       <div>TypeScript</div>
       <div>Next jS</div>
