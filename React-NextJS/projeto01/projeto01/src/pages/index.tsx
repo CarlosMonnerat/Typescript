@@ -11,10 +11,18 @@
 //   subsets: ["latin"],
 // });
 
+const nome = 'Carlos Quintanilha'
+let canal = 'CFBCursos'
+
 export default function Home() {
+  function retnome(){
+    return nome
+  }
+  
   return (
     <main>
-      <div>CFB Cursos</div>
+      <div>{retnome()}</div>
+      <div>{canal}</div>
       <div>Curso de React</div>
       <div>TypeScript</div>
       <div>Next jS</div>
