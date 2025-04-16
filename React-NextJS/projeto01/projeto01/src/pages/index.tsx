@@ -27,6 +27,7 @@ function Topo(){
 export default function Home() {
   return (
     <main>
+      <Topo/>
       <div>Curso de React</div>
       <div>TypeScript</div>
       <div>Next jS</div>
