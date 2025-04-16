@@ -20,7 +20,7 @@ function Topo(){
       <div>Logo</div>
       <div className='flex flex-col justify-center items-center'>
         <div className='text-3xl'>{canal}</div>
-        <div>Curso de React</div>
+        <div className="subtitulo">Curso de React</div>
       </div>
       <div>{nome}</div>
     </div>
