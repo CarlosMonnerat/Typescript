@@ -1,4 +1,5 @@
 import Topo from "@/components/Topo";
+import Card from "@/components/Card";
 
 export default function Home() {
   return (
@@ -8,7 +9,13 @@ export default function Home() {
         <div>Curso de React</div>
         <div>TypeScript</div>
         <div style={{color: '#f00', backgroundColor:'#bbb'}}>Next jS</div>
-      </div>  
+      </div>
+      <div className='flex justify-center gap-3'>
+        <Card produto={'Mouse'} valor={'R$49,90'}/> 
+        <Card produto={'Teclado'} valor={'R$69,90'}/> 
+        <Card produto={'Monitor'} valor={'R$459,90'}/>  
+        <Card produto={'CPU'} valor={'R$799,90'}/>  
+      </div> 
     </main>
   );
 }
