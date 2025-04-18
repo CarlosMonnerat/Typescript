@@ -21,10 +21,10 @@ export default function Home() {
         <div style={{color: '#f00', backgroundColor:'#bbb'}}>Next jS</div>
       </div>
       <div className='flex justify-center gap-3'>
-        <Card produto={'Mouse'} valor={49.90} desconto={10} funcao={calcDesc}/> 
+        <Card produto={'Mouse'} valor={49.90} desconto={0} funcao={calcDesc}/> 
         <Card produto={'Teclado'} valor={69.90} desconto={0} funcao={calcDesc}/> 
-        <Card produto={'Monitor'} valor={459.90} desconto={0} funcao={calcDesc2}/>  
-        <Card produto={'CPU'} valor={799.90} desconto={50} funcao={calcDesc2}/>  
+        <Card produto={'Monitor'} valor={459.90} desconto={100} funcao={calcDesc2}/>  
+        <Card produto={'CPU'} valor={799.90} desconto={0} funcao={calcDesc2}/>  
       </div> 
     </main>
   );
