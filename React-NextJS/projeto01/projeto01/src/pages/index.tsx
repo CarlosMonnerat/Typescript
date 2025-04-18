@@ -13,7 +13,6 @@ export default function Home() {
   );
 }
 
-
 const testecss = {
   display: 'flex',
   justifyContent: 'center',
