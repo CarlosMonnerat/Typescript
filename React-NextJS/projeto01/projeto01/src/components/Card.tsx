@@ -17,7 +17,7 @@ export default function Card(props: CardProps){
                     <div>Preço de venda: R${props.funcao(props.valor, props.desconto)}</div>
                 </div>
             )}
-            <div className='bg-blue-800 text-blue-50'>{props.children}</div>    
+            <div className='bg-blue-800 text-blue-50'>{props.children[1]}</div>    
         </div>
     );
 }
