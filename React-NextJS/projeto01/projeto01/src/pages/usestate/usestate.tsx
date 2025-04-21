@@ -1,10 +1,12 @@
 import { useState } from "react"
 
 export default function usestate(){
-   let [cont, setCont] = useState<number>(0)
+   const [cont, setCont] = useState<number>(0)
 
    function contador(){
-      setCont(cont++);
+      let novoValor = cont;
+      novoValor++;
+      setCont(novoValor);
    }
 
 
