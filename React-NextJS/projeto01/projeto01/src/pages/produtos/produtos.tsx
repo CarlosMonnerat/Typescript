@@ -70,7 +70,9 @@ export default function ProdutosPagina(){
                produtos.map( (e: any) => {
                   if(e.disponivel){
                   return(
-                     <Card key={e.id} produto={e.produto} valor={e.valor} desconto={e.desconto} funcao={calcDesc}/>
+                     <Card key={e.id} produto={e.produto} valor={e.valor} desconto={e.desconto} funcao={calcDesc}>
+                        <div>Teste de componente filho</div>
+                     </Card>
                   )}
                })
             } 

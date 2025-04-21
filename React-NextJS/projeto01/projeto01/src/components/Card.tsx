@@ -2,7 +2,8 @@ interface CardProps{
     produto: string,
     valor: number,
     desconto: number,
-    funcao: any
+    funcao: any,
+    children: any
 }
 
 export default function Card(props: CardProps){
@@ -15,7 +16,8 @@ export default function Card(props: CardProps){
                     <div>Desconto: R${props.desconto}</div>
                     <div>Preço de venda: R${props.funcao(props.valor, props.desconto)}</div>
                 </div>
-            )}    
+            )}
+            <div className='bg-blue-800 text-blue-50'>{props.children}</div>    
         </div>
     );
 }
