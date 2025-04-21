@@ -4,9 +4,15 @@ import DisplayState from "@/components/DisplayState";
 export default function usestate(){
    const [cont, setCont] = useState<number>(0)
 
-   function contador(){
+   function adicionar(){
       let novoValor = cont;
       novoValor++;
+      setCont(novoValor);
+   }
+
+   function remover(){
+      let novoValor = cont;
+      novoValor--;
       setCont(novoValor);
    }
 
@@ -15,7 +21,10 @@ export default function usestate(){
       <div>
          Página useState!!!
          <DisplayState valor={cont}></DisplayState>
-         <button onClick={contador}>Add</button>
+         <div className="flex gap-5">
+            <button className="btnPadrão" onClick={adicionar}>Adicionar</button>
+            <button className="btnPadrão" onClick={remover}>Remover</button>
+         </div>         
       </div>
    )
    

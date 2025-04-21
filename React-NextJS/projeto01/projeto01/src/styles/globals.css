@@ -4,3 +4,11 @@
 @import "tailwindcss";
 @import "./topo.css";
 
+
+.btnPadrão{
+   display: flex;
+   background-color: #ddd;
+   padding: 10px;
+   border-radius: 10px;
+   border: 1px solid black;
+}
