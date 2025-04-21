@@ -1,4 +1,5 @@
 import { useState } from "react"
+import DisplayState from "@/components/DisplayState";
 
 export default function usestate(){
    const [cont, setCont] = useState<number>(0)
@@ -13,7 +14,7 @@ export default function usestate(){
    return(
       <div>
          Página useState!!!
-         <div>{cont}</div>
+         <DisplayState>{cont}</DisplayState>
          <button onClick={contador}>Add</button>
       </div>
    )
