@@ -8,7 +8,7 @@ export default function Topo(){
             <div className='text-3xl'>CfB Cursos</div>
             <div className="subtitulo-topo">Curso de React</div>    
         </div>
-        <nav>
+        <nav className="flex gap-5">
             <Link href={"/"}>
                 Home
             </Link>
@@ -24,6 +24,9 @@ export default function Topo(){
             </Link>
             <Link href={"/teste/test"}>
                 Teste
+            </Link>
+            <Link href={"/usestate/usestate"}>
+                State
             </Link>
         </nav>
     </div>
