@@ -1,5 +1,5 @@
 export default function DisplayState(props: any){
    return(
-      <div>{props.children}</div>
+      <div>{props.valor}</div>
    )
 }

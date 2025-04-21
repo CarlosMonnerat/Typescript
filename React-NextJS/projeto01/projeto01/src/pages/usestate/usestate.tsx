@@ -14,7 +14,7 @@ export default function usestate(){
    return(
       <div>
          Página useState!!!
-         <DisplayState>{cont}</DisplayState>
+         <DisplayState valor={cont}></DisplayState>
          <button onClick={contador}>Add</button>
       </div>
    )
