@@ -22,6 +22,5 @@ export default function usestate(){
          Página useState!!!
          <DisplayState valor={cont} add={adicionar} rem={remover}></DisplayState>  
       </div>
-   )
-   
+   )   
 }
