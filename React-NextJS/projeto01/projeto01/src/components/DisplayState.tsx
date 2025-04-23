@@ -7,7 +7,9 @@ interface DisplayStateProps{
 export default function DisplayState(props: DisplayStateProps){
    return(
       <div>
-         {props.valor}
+         <div>
+            {props.valor}
+         </div>
          <div className="flex gap-5">
             <button className="btnPadrão" onClick={props.add}>Adicionar</button>
             <button className="btnPadrão" onClick={props.rem}>Remover</button>
