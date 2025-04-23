@@ -20,11 +20,7 @@ export default function usestate(){
    return(
       <div>
          Página useState!!!
-         <DisplayState valor={cont}></DisplayState>
-         <div className="flex gap-5">
-            <button className="btnPadrão" onClick={adicionar}>Adicionar</button>
-            <button className="btnPadrão" onClick={remover}>Remover</button>
-         </div>         
+         <DisplayState valor={cont} add={adicionar} rem={remover}></DisplayState>  
       </div>
    )
    
