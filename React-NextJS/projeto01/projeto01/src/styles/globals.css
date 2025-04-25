@@ -12,3 +12,21 @@
    border-radius: 10px;
    border: 1px solid black;
 }
+
+.campoForm{
+   display: flex;
+   flex-direction: column;
+   justify-content: flex-start;
+   align-items: flex-start;
+}
+
+.campoForm label{
+   font-size: larger;
+}
+
+.campoForm input{
+   border: 1px solid #888;
+   border-radius: 3px;
+   padding: 3px;
+
+}
