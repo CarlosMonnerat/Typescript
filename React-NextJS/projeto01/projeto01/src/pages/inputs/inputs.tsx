@@ -1,9 +1,18 @@
 import Topo from "@/components/Topo";
+import { run } from "node:test";
 import { useState } from "react"
+
+const cursos = ["HTML","React","C++","JavaScript","Arduino","CSS"];
 
 export default function inputs(){
    const [nome, setNome] = useState<string>("");
-   const [curso, setCurso] = useState<string>("");
+   const [curso, setCurso] = useState<string>(cursos[0]);
+
+   function fcursos(){
+      return cursos.map((c: any)=>{
+         return <option value={c}>{c}</option>
+      })
+   }
 
    return(
       <div>
@@ -16,13 +25,9 @@ export default function inputs(){
             <div className="campoForm">
                <label>Curso</label>
                <select value={curso} onChange={(evt) => setCurso(evt.target.value)}>
-                  <option value=""></option>
-                  <option value="HTML">HTML</option>
-                  <option value="React">React</option>
-                  <option value="C++">C++</option>
-                  <option value="JavaScript">JavaScript</option>
-                  <option value="Arduino">Arduino</option>
-                  <option value="CSS">CSS</option>
+                 {
+                     fcursos()
+                 }
                </select>
             </div>
 
