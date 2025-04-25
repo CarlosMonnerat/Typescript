@@ -1,3 +1,4 @@
+import Topo from "@/components/Topo";
 import { useState } from "react"
 
 export default function inputs(){
@@ -5,18 +6,22 @@ export default function inputs(){
    const [curso, setCurso] = useState<string>("");
 
    return(
-      <div className="m-2.5">
-         <div className="campoForm">
-            <label>Nome</label>
-            <input type="text" value={nome} onChange={(evt) => setNome(evt.target.value)}/>
+      <div>
+         <Topo/>
+         <div className="m-2.5">
+            <div className="campoForm">
+               <label>Nome</label>
+               <input type="text" value={nome} onChange={(evt) => setNome(evt.target.value)}/>
+            </div>
+            <div className="campoForm">
+               <label>Curso</label>
+               <input type="text" value={curso} onChange={(evt) => setCurso(evt.target.value)}/>
+            </div>
+
+            <div>Nome digitado: {nome}</div>
+            <div>Curso escolhido: {curso}</div>
          </div>
-         <div className="campoForm">
-            <label>Curso</label>
-            <input type="text" value={curso} onChange={(evt) => setCurso(evt.target.value)}/>
-         </div>
-         
-         <div>Nome digitado: {nome}</div>
-         <div>Curso escolhido: {curso}</div>
       </div>
+      
    )
 }
