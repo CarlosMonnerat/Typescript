@@ -1,5 +1,5 @@
-import Topo from "@/components/Topo";
-import { run } from "node:test";
+import Topo from "@/components/Topo"
+import Globais from "@/components/Globais"
 import { useState } from "react"
 
 const cursos = ["HTML","React","C++","JavaScript","Arduino","CSS"];
@@ -33,6 +33,11 @@ export default function inputs(){
 
             <div>Nome Digitado: {nome}</div>
             <div>Curso escolhido: {curso}</div>
+            <div>
+               {<p>{Globais.canal}</p>}
+               {<p>{Globais.curso}</p>}
+               {<p>{Globais.ano}</p>}
+            </div>
          </div>
       </div>   
    )

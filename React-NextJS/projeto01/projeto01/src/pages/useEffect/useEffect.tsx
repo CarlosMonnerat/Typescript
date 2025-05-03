@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react"
 import Topo from "@/components/Topo"
+import Globais from "@/components/Globais";
 
 export default function UseEffect(){ 
    const [aux, setAux] = useState<number>(0);
@@ -22,6 +23,11 @@ export default function UseEffect(){
          <div>
             <p>{`Valor de aux: ${aux}`}</p>
             <button className="btnPadrão" onClick={add}>Adicionar</button>
+         </div>
+         <div>
+            {<p>{Globais.canal}</p>}
+            {<p>{Globais.curso}</p>}
+            {<p>{Globais.ano}</p>}
          </div>   
       </div>
    )
