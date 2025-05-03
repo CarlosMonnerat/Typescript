@@ -31,7 +31,7 @@ export default function inputs(){
                </select>
             </div>
 
-            <div>Nome Digitadoo: {nome}</div>
+            <div>Nome Digitado: {nome}</div>
             <div>Curso escolhido: {curso}</div>
          </div>
       </div>   

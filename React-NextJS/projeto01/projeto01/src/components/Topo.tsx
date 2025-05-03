@@ -26,10 +26,13 @@ export default function Topo(){
                 Teste
             </Link>
             <Link href={"/usestate/usestate"}>
-                State
+                useState
             </Link>
-            <Link href={"inputs/inputs"}>
+            <Link href={"/inputs/inputs"}>
                 Inpus
+            </Link>
+            <Link href={"/useEffect/useEffect"}>
+                useEffect
             </Link>
         </nav>
     </div>
