@@ -1,12 +1,16 @@
 import Topo from "@/components/Topo"
 import Globais from "@/components/Globais"
-import { useState } from "react"
+import { useState, useEffect } from "react"
 
 const cursos = ["HTML","React","C++","JavaScript","Arduino","CSS"];
 
 export default function inputs(){
    const [nome, setNome] = useState<string>("");
    const [curso, setCurso] = useState<string>(cursos[0]);
+
+   useEffect(()=>{
+      Globais.curso = "React";
+   });
 
    function fcursos(){
       return cursos.map((c: any)=>{
