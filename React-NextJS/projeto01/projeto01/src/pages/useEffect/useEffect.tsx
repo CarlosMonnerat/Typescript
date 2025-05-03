@@ -2,7 +2,6 @@ import { useState, useEffect } from "react"
 import Topo from "@/components/Topo"
 
 export default function UseEffect(){ 
-   const [cont, setCont] = useState<number>(0);
    const [aux, setAux] = useState<number>(0);
 
    useEffect(()=>{   //O useEffect é chamado toda vez que há uma renderização na página
@@ -21,7 +20,6 @@ export default function UseEffect(){
          <Topo/>
          <h1>Página useEffect</h1>
          <div>
-            <p>{`Valor de cont: ${cont}`}</p>
             <p>{`Valor de aux: ${aux}`}</p>
             <button className="btnPadrão" onClick={add}>Adicionar</button>
          </div>   
