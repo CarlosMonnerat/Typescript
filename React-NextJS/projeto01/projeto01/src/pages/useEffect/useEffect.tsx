@@ -1,18 +1,20 @@
 import { useState, useEffect } from "react"
 import Topo from "@/components/Topo"
 
-export default function UseEffect(){
+export default function UseEffect(){ 
    const [cont, setCont] = useState<number>(0);
+   const [aux, setAux] = useState<number>(0);
 
-   useEffect(()=>{
-
-   });
+   useEffect(()=>{   //O useEffect é chamado toda vez que há uma renderização na página
+      alert('UseEffect disparado');
+   },[aux]);   //'aux' é uma dependencia do 'useEffect', ou seja toda vez que 'aux' for alterado, irá chamar o 'use effect'
+               // Ao passar um array vazio, dizemos para o useEfect rodar apenas uma vez.
 
    function add(){
-      let c = cont;
-      c++;
-      setCont(c);
-   }
+      let a = aux;
+      a++;
+      setAux(a);
+   };
 
    return(
       <div>
@@ -20,6 +22,7 @@ export default function UseEffect(){
          <h1>Página useEffect</h1>
          <div>
             <p>{`Valor de cont: ${cont}`}</p>
+            <p>{`Valor de aux: ${aux}`}</p>
             <button className="btnPadrão" onClick={add}>Adicionar</button>
          </div>   
       </div>
