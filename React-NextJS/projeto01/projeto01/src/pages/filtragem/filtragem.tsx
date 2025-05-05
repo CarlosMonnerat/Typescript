@@ -11,6 +11,7 @@ const carros = [
 ]
 
 //let carros2: any = '';
+let apiCarregada = true;
  
 export default function filtragem(){
    const [categ, setCateg] = useState<string>('');
@@ -22,24 +23,29 @@ export default function filtragem(){
    //    .then(res => res.json())
    //    .then(res =>{
    //       carros2 = res;
-   //    });
+   //       apiCarregada = true;
+   //    })
    // },[]);
 
    function criarLinhas(cat: any){
-      setCateg(cat);
-      let l: any = [];
-      carros.forEach((c: any) => {
-         if(c.categoria == cat){
-            l.push(
-               <div className="flex flex-row w-[500px]" key={c.id}>
-                  <div className="w-full">{c.categoria}</div>
-                  <div className="w-full">{c.valor}</div>
-                  <div className="w-full">{c.modelo}</div>
-               </div>
-            )
-         }
-      })
-      setLinhas(l);
+      if(apiCarregada){
+         setCateg(cat);
+         let l: any = [];
+         carros.forEach((c: any) => {
+            if(c.categoria == cat){
+               l.push(
+                  <div className="flex flex-row w-[500px]" key={c.id}>
+                     <div className="w-full">{c.categoria}</div>
+                     <div className="w-full">{c.valor}</div>
+                     <div className="w-full">{c.modelo}</div>
+                  </div>
+               )
+            }
+         })
+         setLinhas(l);
+      }else{
+         alert('Lista Carregando...');
+      }      
    };
 
    return(
