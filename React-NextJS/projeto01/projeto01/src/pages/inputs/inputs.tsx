@@ -4,7 +4,7 @@ import { useState, useEffect } from "react"
 
 const cursos = ["HTML","React","C++","JavaScript","Arduino","CSS"];
 
-export default function inputs(){
+export default function Inputs(){
    const [nome, setNome] = useState<string>("");
    const [curso, setCurso] = useState<string>(cursos[0]);
 
