@@ -13,7 +13,7 @@ const carros = [
 //let carros2: any = '';
 let apiCarregada = true;
  
-export default function filtragem(){
+export default function Filtragem(){
    const [categ, setCateg] = useState<string>('');
    const [linhas, setLinhas] = useState<any>([]);
 
