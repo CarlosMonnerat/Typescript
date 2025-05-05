@@ -1,18 +1,29 @@
 import Topo from "@/components/Topo"
-import { useState } from "react";
+import { useState, useEffect } from "react"
 
 const carros = [
-   {id: 0, categoria: 'Esporte', valor: '120000.00', modelo: 'Golf GTI'},
-   {id: 1, categoria: 'Esporte', valor: '200000.00', modelo: 'Camaro'},
-   {id: 2, categoria: 'SUV', valor: '100000.00', modelo: 'HRV'},
-   {id: 3, categoria: 'SUV', valor: '100000.00', modelo: 'T-Cross'},
-   {id: 4, categoria: 'Utilitario', valor: '180000.00', modelo: 'Hillux'},
-   {id: 5, categoria: 'Utilitario', valor: '160000.00', modelo: 'Ranger'}
-];
+   {id: 0, categoria: "Esporte", valor: "120000.00", modelo:'Golf GTI'},
+   {id: 1, categoria: "Esporte", valor: "200000.00", modelo:'Camaro'},
+   {id: 2, categoria: "SUV", valor: "100000.00", modelo:'HRV'},
+   {id: 3, categoria: "SUV", valor: "100000.00", modelo:'T-Cross'},
+   {id: 4, categoria: "Utilitario", valor: "180000.00", modelo:'Hillux'},
+   {id: 5, categoria: "Utilitario", valor: "160000.00", modelo:'Ranger'},
+]
 
+//let carros2: any = '';
+ 
 export default function filtragem(){
    const [categ, setCateg] = useState<string>('');
    const [linhas, setLinhas] = useState<any>([]);
+
+//Fazendo a filtragem de dados vindo de uma API
+   // useEffect(() =>{
+   //    fetch('http://127.0.0.1:1880/carros_API') //Endpoint não criado
+   //    .then(res => res.json())
+   //    .then(res =>{
+   //       carros2 = res;
+   //    });
+   // },[]);
 
    function criarLinhas(cat: any){
       setCateg(cat);
