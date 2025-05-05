@@ -14,13 +14,30 @@ export default function filtragem(){
    const [categ, setCateg] = useState<string>('');
    const [linhas, setLinhas] = useState<any>([]);
 
+   function criarLinhas(cat: any){
+      setCateg(cat);
+      let l: any = [];
+      carros.forEach((c: any) => {
+         if(c.categoria == cat){
+            l.push(
+               <div className="flex flex-row w-[500px]" key={c.id}>
+                  <div className="w-full">{c.categoria}</div>
+                  <div className="w-full">{c.valor}</div>
+                  <div className="w-full">{c.modelo}</div>
+               </div>
+            )
+         }
+      })
+      setLinhas(l);
+   };
+
    return(
       <div>
          <Topo/>
 
          <h1>Página Filtragem</h1>
          <label>Selecionar a categoria</label>
-         <select value={categ} onChange={(evt) => {}}>
+         <select value={categ} onChange={(evt) => {criarLinhas(evt.target.value)}}>
             <option value = ''>Nenhum</option>
             <option value = 'Esporte'>Esporte</option>
             <option value = 'SUV'>SUV</option>
