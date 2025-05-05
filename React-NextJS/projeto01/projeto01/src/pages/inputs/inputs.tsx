@@ -16,7 +16,7 @@ export default function inputs(){
       return cursos.map((c: any)=>{
          return <option value={c}>{c}</option>
       })
-   }
+   };
 
    return(
       <div>
@@ -45,4 +45,4 @@ export default function inputs(){
          </div>
       </div>   
    )
-}
+};
