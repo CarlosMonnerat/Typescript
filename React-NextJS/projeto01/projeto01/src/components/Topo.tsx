@@ -14,7 +14,7 @@ export default function Topo(){
                 </Link>
                 <Link href={ 
                     {
-                        pathname: "/produtos/produtos",
+                        pathname: "/produtos/Produtos",
                         query: {
                             nome: 'Carlos', curso: 'React Next'
                         }
@@ -22,19 +22,19 @@ export default function Topo(){
                 }>
                     Produtos
                 </Link>
-                <Link href={"/teste/test"}>
+                <Link href={"/teste/Test"}>
                     Teste
                 </Link>
-                <Link href={"/usestate/usestate"}>
+                <Link href={"/usestate/Usestate"}>
                     useState
                 </Link>
-                <Link href={"/inputs/inputs"}>
+                <Link href={"/inputs/Inputs"}>
                     Inpus
                 </Link>
-                <Link href={"/useEffect/useEffect"}>
+                <Link href={"/useEffect/UseEffect"}>
                     useEffect
                 </Link>
-                <Link href={"/filtragem/filtragem"}>
+                <Link href={"/filtragem/Filtragem"}>
                     Filtragem
                 </Link>
             </nav>
