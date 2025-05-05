@@ -14,7 +14,7 @@ export default function Inputs(){
 
    function fcursos(){
       return cursos.map((c: any)=>{
-         return <option value={c}>{c}</option>
+         return <option value={c} key={Math.random()*99999999999999999999999}>{c}</option>
       })
    };
 
