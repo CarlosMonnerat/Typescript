@@ -1,6 +1,7 @@
 export default function Tabelaimc () {
    return (
       <table>
+         <caption>Tabela com os valores de referência:</caption>
          <tr>
             <th>Classificação</th>
             <th>IMC</th>
