@@ -5,7 +5,7 @@ import Tabelaimc from "@/components/Tabelaimc";
 export default function Calcimc () {
    const [peso, setPeso] = useState<number>(0);
    const [altura, setAltura] = useState<number>(0);
-   const [imc, setImc] = useState<number>();
+   const [imc, setImc] = useState<number>(0);
 
    function Calcular () {
       if(altura * altura > 90) {
@@ -23,8 +23,8 @@ export default function Calcimc () {
          <Form label = "Peso" state={peso} funcState={setPeso}/>
          <Form label = "Altura" state={altura} funcState={setAltura}/>
          <button className="bg-indigo-900 text-white mx-2 p-1 rounded-lg cursor-pointer" onClick={Calcular}>Calcular</button>
-         <p className="bg-zinc-100 p-1">Resultado: {imc}</p>
-         <Tabelaimc/>
+         <p className="bg-zinc-100 p-1">Resultado: {imc.toFixed(1)}</p>
+         <Tabelaimc imc={imc}/>
       </div>
    )
 };
