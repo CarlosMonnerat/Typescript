@@ -8,8 +8,13 @@ export default function Calcimc () {
    const [imc, setImc] = useState<number>();
 
    function Calcular () {
-      let res = peso / (altura * altura);
-      setImc(res);
+      if(altura * altura > 90) {
+         let res = peso / ((altura * altura) / 10000);
+         setImc(res);
+      }else{
+         let res = peso / (altura * altura);
+         setImc(res);
+      }
    };
 
    return (
