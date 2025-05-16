@@ -13,12 +13,12 @@ export default function Calcimc () {
    };
 
    return (
-      <div>
-         <p>Cálculo do IMC</p>
+      <div className="flex flex-col border border-black w-[300px] gap-5 bg-white">
+         <p className="w-full text-center bg-indigo-900 font-bold text-lg text-white">Cálculo do IMC</p>
          <Form label = "Peso" state={peso} funcState={setPeso}/>
          <Form label = "Altura" state={altura} funcState={setAltura}/>
-         <button onClick={Calcular}>Calcular</button>
-         <p>Resultado: {imc}</p>
+         <button className="bg-indigo-900 text-white mx-2 p-1 rounded-lg cursor-pointer" onClick={Calcular}>Calcular</button>
+         <p className="bg-zinc-100 p-1">Resultado: {imc}</p>
          <Tabelaimc/>
       </div>
    )
