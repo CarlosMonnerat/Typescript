@@ -45,9 +45,28 @@ export default function Dadosimc () {
                <button className="bg-indigo-900 w-full text-white mx-2 p-1 rounded-lg cursor-pointer">Gravar</button>
             </div>
          </div>
-         <div>
-            GRID
-         </div>
+         <table className="flex flex-col gap-3 mt-2.5 mb-2 ml-2.5 mr-2.5">
+            <caption className="w-full text-cente font-bold text-lg">Tabela com os Dados Salvos</caption>
+            <thead>
+               <tr className="flex ">
+                  <th className="w-1/2">Nome</th>
+                  <th className="w-1/2">Peso</th>
+                  <th className="w-1/2">Altura</th>
+                  <th className="w-1/2">IMC</th>
+                  <th className="w-1/2">Data</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr className="flex bg-zinc-300 ">
+                  <td className="w-1/2 p-0.5 text-center">nome</td>
+                  <td className="w-1/2 p-0.5 text-center">peso</td>
+                  <td className="w-1/2 p-0.5 text-center">altura</td>
+                  <td className="w-1/2 p-0.5 text-center">imc</td>
+                  <td className="w-1/2 p-0.5 text-center">data</td>
+               </tr>
+            </tbody>
+         </table>
+         
          
       </div>
    )
