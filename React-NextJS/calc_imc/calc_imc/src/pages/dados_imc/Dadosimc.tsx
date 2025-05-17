@@ -20,7 +20,7 @@ export default function Dadosimc () {
    
    return (
       <div>
-         <div className='flex flex-col justify-center items-center bg-amber-200'>
+         <div className='flex flex-col justify-center items-center border-2 ml-2.5 mr-2.5  bg-amber-200'>
             <div className='campoForm'>
                <label>Nome</label>
                <input className='inputDados' type='text' value={nome} onChange={(e) => setNome(e.target.value)}/>
