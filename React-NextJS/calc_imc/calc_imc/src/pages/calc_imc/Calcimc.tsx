@@ -25,14 +25,14 @@ export default function Calcimc () {
          <Form label = "Altura" state={altura} funcState={setAltura}/>
          <button className="bg-indigo-900 text-white mx-2 p-1 rounded-lg cursor-pointer" onClick={Calcular}>Calcular</button>
          <p className="bg-zinc-200 p-1">Resultado: {imc.toFixed(1)}</p>
-         <Link href={{
+         <Link className="bg-indigo-900 text-white mx-2 p-1 rounded-lg text-center cursor-pointer" href={{
             pathname: '/dados_imc/Dadosimc',
             query: {
-               p_peso: 0.0,
-               p_altura: 0.0,
-               p_imc: 0.0
+               p_peso: peso,
+               p_altura: altura,
+               p_imc: imc
             } 
-         }}>Gravar</Link>
+         }}>Dados IMC</Link>
          <Tabelaimc imc={imc}/>
       </div>
    )
