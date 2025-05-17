@@ -26,7 +26,7 @@ export default function Calcimc () {
          <button className="bg-indigo-900 text-white mx-2 p-1 rounded-lg cursor-pointer" onClick={Calcular}>Calcular</button>
          <p className="bg-zinc-200 p-1">Resultado: {imc.toFixed(1)}</p>
          <Link href={{
-            pathname: '/',
+            pathname: '/dados_imc/Dadosimc',
             query: {
                p_peso: 0.0,
                p_altura: 0.0,
