@@ -58,11 +58,32 @@ export default function Dadosimc () {
             </thead>
             <tbody>
                <tr className="flex bg-zinc-300 ">
-                  <td className="w-1/2 p-0.5 text-center">nome</td>
-                  <td className="w-1/2 p-0.5 text-center">peso</td>
-                  <td className="w-1/2 p-0.5 text-center">altura</td>
-                  <td className="w-1/2 p-0.5 text-center">imc</td>
-                  <td className="w-1/2 p-0.5 text-center">data</td>
+                  <td className="w-1/2 p-0.5 text-center">nome 1</td>
+                  <td className="w-1/2 p-0.5 text-center">peso 1</td>
+                  <td className="w-1/2 p-0.5 text-center">altura 1</td>
+                  <td className="w-1/2 p-0.5 text-center">imc 1</td>
+                  <td className="w-1/2 p-0.5 text-center">data 1</td>
+               </tr>
+               <tr className="flex ">
+                  <td className="w-1/2 p-0.5 text-center">nome 2</td>
+                  <td className="w-1/2 p-0.5 text-center">peso 2</td>
+                  <td className="w-1/2 p-0.5 text-center">altura 2</td>
+                  <td className="w-1/2 p-0.5 text-center">imc 2</td>
+                  <td className="w-1/2 p-0.5 text-center">data 2</td>
+               </tr>
+               <tr className="flex bg-zinc-300 ">
+                  <td className="w-1/2 p-0.5 text-center">nome 3</td>
+                  <td className="w-1/2 p-0.5 text-center">peso 3</td>
+                  <td className="w-1/2 p-0.5 text-center">altura 3</td>
+                  <td className="w-1/2 p-0.5 text-center">imc 3</td>
+                  <td className="w-1/2 p-0.5 text-center">data 3</td>
+               </tr>
+                <tr className="flex ">
+                  <td className="w-1/2 p-0.5 text-center">nome 4</td>
+                  <td className="w-1/2 p-0.5 text-center">peso 4</td>
+                  <td className="w-1/2 p-0.5 text-center">altura 4</td>
+                  <td className="w-1/2 p-0.5 text-center">imc 4</td>
+                  <td className="w-1/2 p-0.5 text-center">data 4</td>
                </tr>
             </tbody>
          </table>
