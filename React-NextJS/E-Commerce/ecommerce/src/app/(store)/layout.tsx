@@ -1,4 +1,5 @@
-import ProviderCart from "@/data/context/cartContext";
+'use client'
+import { ProviderCart } from "@/data/context/cartContext";
 
 export default function Layout(props: any) {
    return(

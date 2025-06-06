@@ -1,5 +1,15 @@
-export default function ProviderCart(props: any) {
+import { createContext } from "react";
+
+const cartContext = createContext<any>(null);
+
+export function ProviderCart(props: any) {
    return(
-      <div className="border-4 border-red-500">{props.children}</div>
+      <cartContext.Provider value={{
+         number: 1000,
+      }}>
+         {props.children}
+      </cartContext.Provider>
    )
 };
+
+export default cartContext;
