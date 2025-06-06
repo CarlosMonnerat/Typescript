@@ -1,10 +1,9 @@
 'use client'
 import Page from "@/components/template/Page";
-import cartContext from "@/data/context/cartContext";
-import { useContext, useState } from "react";
+import useCart from "@/data/hooks/useCart";
 
 export default function CartPage() {
-   const { number} = useContext(cartContext);
+   const { number} = useCart();
 
    return (
       <Page>

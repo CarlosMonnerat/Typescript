@@ -1,10 +1,9 @@
 'use client'
 import Page from "@/components/template/Page";
-import cartContext from "@/data/context/cartContext";
-import { useContext } from "react";
+import useCart from "@/data/hooks/useCart";
 
 export default function Home() {
-  const { number, increment, decrement } = useContext(cartContext);
+  const { number, increment, decrement } = useCart();
 
   return (
     <Page>
@@ -15,3 +14,5 @@ export default function Home() {
     </Page>
   );
 }
+
+
