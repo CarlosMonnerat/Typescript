@@ -9,7 +9,9 @@ export default function Page(props: PageProps) {
    return(
       <div className="flex flex-col">
          <Header/>
-         <main>{props.children}</main>
+         <main>
+            {props.children}
+         </main>
       </div>
    )
 };
