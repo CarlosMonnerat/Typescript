@@ -1,4 +1,4 @@
-'use client'
+'use client';
 import Page from "@/components/template/Page";
 import useCart from "@/data/hooks/useCart";
 

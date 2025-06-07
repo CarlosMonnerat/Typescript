@@ -1,9 +1,9 @@
-'use client'
+'use client';
 import Page from "@/components/template/Page";
 import useCart from "@/data/hooks/useCart";
 
 export default function CartPage() {
-   const { number} = useCart();
+   const { number } = useCart();
 
    return (
       <Page>
