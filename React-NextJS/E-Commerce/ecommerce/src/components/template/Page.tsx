@@ -9,7 +9,7 @@ export default function Page(props: PageProps) {
    return(
       <div className="flex flex-col min-h-screen">
          <Header/>
-         <main className={`bg-amber-500 w-[1200px] mx-auto flex-1
+         <main className={`bg-red-600 w-[1200px] mx-auto flex-1
             ${props.className ?? ''} py-10`
          }>
             {props.children}
