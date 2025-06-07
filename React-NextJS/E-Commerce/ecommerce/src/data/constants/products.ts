@@ -1,6 +1,6 @@
 import Product from "../model/Product";
 
-const products: Product[] = [
+const products: Product [] = [
   {
    id: 1,
    name: 'Smartphone Alpha One',
