@@ -1,16 +1,16 @@
 'use client';
+import ProductCard from "@/components/product/ProductCard";
 import Page from "@/components/template/Page";
-import useCart from "@/data/hooks/useCart";
+import product from "@/data/constants/products";
 
 export default function Home() {
-  const { number, increment, decrement } = useCart();
-
   return (
     <Page>
-      <div>Início da Aplicação</div>
-      <div>Numero: {number}</div>
-      <button onClick={increment}>Adicionar</button>
-      <button onClick={decrement}>Remover</button>
+      <div className="flex gap-5 justify-center flex-wrap ">
+        {product.map(e => (
+          <ProductCard key={e.id} product={e} />
+        ))}
+      </div>
     </Page>
   );
 }

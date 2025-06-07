@@ -1,47 +1,47 @@
 import Product from "../model/Product";
 
-const products: Product [] = [
+ const products: Product [] = [
   {
    id: 1,
    name: 'Smartphone Alpha One',
    price: 2599.9,
    description: 'Smartphone com tela AMOLED de 6.7", 256GB de armazenamento, 8GB de RAM e câmera tripla de 64MP',
-   image: 'https://images.unsplash.com/photo-1603791440384-56cd371ee9a7'
+   image: 'https://images.pexels.com/photos/27635789/pexels-photo-27635789/free-photo-of-smartphone-tecnologia-exibicao-visor.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
    },
    {
     id: 2,
     name: 'Notebook Pro 15',
     price: 5499.9,
     description: 'Notebook com tela de 15 polegadas, Intel i7, 16GB RAM, SSD 512GB',
-    image: 'https://images.unsplash.com/photo-1517336714731-489689fd1ca8'
+    image: 'https://images.pexels.com/photos/18105/pexels-photo.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
   },
   {
     id: 3,
     name: 'Fone Bluetooth X100',
     price: 299.9,
     description: 'Fone de ouvido bluetooth com cancelamento de ruído',
-    image: 'https://images.unsplash.com/photo-1580894894513-79b736744398'
+    image: 'https://images.pexels.com/photos/10958687/pexels-photo-10958687.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
   },
   {
     id: 4,
     name: 'Smartwatch Series 5',
     price: 1199.0,
     description: 'Relógio inteligente com monitoramento de saúde e GPS',
-    image: 'https://images.unsplash.com/photo-1579586337278-3e3f1c6f7445'
+    image: 'https://images.pexels.com/photos/31541471/pexels-photo-31541471/free-photo-of-smartwatch-com-aplicativos-coloridos-na-tela.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
   },
   {
     id: 5,
     name: 'Tablet Ultra 10',
     price: 2399.5,
     description: 'Tablet de 10.1", 64GB, ideal para leitura e vídeos',
-    image: 'https://images.unsplash.com/photo-1587825140708-6f8f39182d5c'
+    image: 'https://images.pexels.com/photos/1334597/pexels-photo-1334597.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
   },
   {
     id: 6,
     name: 'Teclado Mecânico RGB',
     price: 349.9,
     description: 'Teclado mecânico com iluminação RGB e switches azuis',
-    image: 'https://images.unsplash.com/photo-1517336714731-489689fd1ca8'
+    image: 'https://images.pexels.com/photos/1714205/pexels-photo-1714205.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
   },
   {
     id: 7,
@@ -142,3 +142,6 @@ const products: Product [] = [
     image: 'https://images.unsplash.com/photo-1606813902914-34d3d06c4db6'
   }
 ];
+
+export default products;
+

@@ -6,7 +6,7 @@ export interface ProductCardProps {
 };
 
 export default function ProductCard(props: ProductCardProps) {
-   const { name, description, price, image} = props.product;
+   const { id, name, description, price, image} = props.product;
 
    return (
       <div className="flex flex-col w-72">
