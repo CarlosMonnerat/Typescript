@@ -48,98 +48,98 @@ import Product from "../model/Product";
     name: 'Mouse Gamer Precision',
     price: 199.9,
     description: 'Mouse com 16000 DPI e botões programáveis',
-    image: 'https://images.unsplash.com/photo-1618401472227-c1c9c3b5d9b5'
+    image: 'https://images.pexels.com/photos/28779687/pexels-photo-28779687/free-photo-of-mouse-gamer-futurista-em-tapete-de-alta-tecnologia.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
   },
   {
     id: 8,
     name: 'Monitor 4K UltraWide',
     price: 2899.0,
     description: 'Monitor 4K UltraWide de 34 polegadas, ideal para produtividade',
-    image: 'https://images.unsplash.com/photo-1587829741301-dc798b83add3'
+    image: 'https://images.pexels.com/photos/1714204/pexels-photo-1714204.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
   },
   {
     id: 9,
     name: 'Webcam HD 1080p',
     price: 349.0,
     description: 'Webcam com resolução Full HD, ideal para videoconferências',
-    image: 'https://images.unsplash.com/photo-1610394214371-37994d844f93'
+    image: 'https://images.pexels.com/photos/28374509/pexels-photo-28374509/free-photo-of-lente-de-camera-de-seguranca-webcam-luzes-de-neon.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
   },
   {
     id: 10,
     name: 'Caixa de Som Bluetooth',
     price: 499.9,
     description: 'Caixa de som portátil com som potente e bateria de longa duração',
-    image: 'https://images.unsplash.com/photo-1570819172234-49a5a1ba6361'
+    image: 'https://images.pexels.com/photos/4917455/pexels-photo-4917455.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
   },
   {
     id: 11,
     name: 'HD Externo 2TB',
     price: 399.9,
     description: 'HD portátil com 2TB de capacidade e conexão USB 3.0',
-    image: 'https://images.unsplash.com/photo-1587829741301-dc798b83add3'
+    image: 'https://images.pexels.com/photos/11216304/pexels-photo-11216304.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
   },
   {
     id: 12,
     name: 'SSD NVMe 1TB',
     price: 699.0,
     description: 'SSD ultra-rápido NVMe com 1TB de capacidade',
-    image: 'https://images.unsplash.com/photo-1587202372775-98907ed3f328'
+    image: 'https://images.pexels.com/photos/28666524/pexels-photo-28666524/free-photo-of-ssd-nvme-de-alto-desempenho-em-superficie-cinza.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
   },
   {
     id: 13,
     name: 'Roteador Wi-Fi 6',
     price: 799.0,
     description: 'Roteador com suporte ao padrão Wi-Fi 6 para conexões mais rápidas',
-    image: 'https://images.unsplash.com/photo-1613747493331-96db55b8adf3'
+    image: 'https://images.pexels.com/photos/28348054/pexels-photo-28348054/free-photo-of-dispositivo-roteador-de-rede-sem-fio-residencial-inteligente.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
   },
   {
     id: 14,
     name: 'Headset Gamer Surround',
     price: 599.0,
     description: 'Headset com som surround 7.1 e microfone com cancelamento de ruído',
-    image: 'https://images.unsplash.com/photo-1580894908361-9b907b0b1d2d'
+    image: 'https://images.pexels.com/photos/205926/pexels-photo-205926.jpeg'
   },
   {
     id: 15,
     name: 'Carregador Sem Fio',
     price: 149.9,
     description: 'Base de carregamento sem fio compatível com Qi',
-    image: 'https://images.unsplash.com/photo-1611078489935-d6f9d63a1c9e'
+    image: 'https://images.pexels.com/photos/18589085/pexels-photo-18589085/free-photo-of-alto-falante-megafone-dispositivo-aparelho.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
   },
   {
     id: 16,
     name: 'Drone Compacto 4K',
     price: 3499.0,
     description: 'Drone com câmera 4K e estabilização de imagem',
-    image: 'https://images.unsplash.com/photo-1549924231-f129b911e442'
+    image: 'https://images.pexels.com/photos/6145874/pexels-photo-6145874.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
   },
   {
     id: 17,
     name: 'Câmera de Ação',
     price: 999.0,
     description: 'Câmera de ação à prova d’água com gravação em 4K',
-    image: 'https://images.unsplash.com/photo-1564866657313-709c1462ae34'
+    image: 'https://images.pexels.com/photos/6370373/pexels-photo-6370373.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
   },
   {
     id: 18,
     name: 'Pen Drive 128GB',
     price: 89.9,
     description: 'Pen Drive USB 3.1 de 128GB de alta velocidade',
-    image: 'https://images.unsplash.com/photo-1618744746360-7e3a3f832974'
+    image: 'https://images.pexels.com/photos/18641665/pexels-photo-18641665/free-photo-of-memoria-lembranca-acessorio-pequeno.png?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
   },
   {
     id: 19,
     name: 'Smart TV 50"',
     price: 2999.9,
     description: 'Smart TV 4K com acesso a apps e assistente de voz',
-    image: 'https://images.unsplash.com/photo-1587825140920-61c34d6f0bb3'
+    image: 'https://images.pexels.com/photos/5202925/pexels-photo-5202925.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
   },
   {
     id: 20,
     name: 'Cadeira Gamer Confort',
     price: 1399.0,
     description: 'Cadeira ergonômica com suporte lombar e encosto reclinável',
-    image: 'https://images.unsplash.com/photo-1606813902914-34d3d06c4db6'
+    image: 'https://images.pexels.com/photos/13871187/pexels-photo-13871187.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
   }
 ];
 
