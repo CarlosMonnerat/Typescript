@@ -17,22 +17,22 @@ export default function AreaItemCart(props: AreaItemCartProps){
                className="object-cover"
             />
          </div>
-         <div className="flex flex-col justify-center flex-1 bg-red-500">
-               <span className="text-xl font-bold">
+         <div className="flex flex-col justify-center flex-1 ">
+               <span className="text-xl text-cyan-50 font-bold">
                   {props.item.product.name}
                </span>
-            </div>
-            <div className="flex gap-2 items-center px-5">
-               <button onClick={() => {}}>
-                  <IconMinus className="text-cyan-50"/>
-               </button>
-               <span className="flex px-4 py-2 rounded-md bg-cyan-50">
-                  {props.item.quantity}
-               </span>
-               <button onClick={() => {}}>
-                  <IconPlus className="text-cyan-50"/>
-               </button>
-            </div>
+         </div>
+         <div className="flex gap-2 items-center px-5">
+            <button onClick={() => {}}>
+               <IconMinus className="text-cyan-50"/>
+            </button>
+            <span className="flex px-4 py-2 rounded-md bg-cyan-50">
+               {props.item.quantity}
+            </span>
+            <button onClick={() => {}}>
+               <IconPlus className="text-cyan-50"/>
+            </button>
+         </div>
 
       </div>
    )
