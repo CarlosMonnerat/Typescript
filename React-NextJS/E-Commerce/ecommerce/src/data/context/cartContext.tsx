@@ -26,14 +26,13 @@ export function ProviderCart(props: any) {
    };
 
    function toRemove(product: Product){
-      const index = items.findIndex((i) => i.product.id === product.id);
-      if(index === -1) {
-         setItems([...items, { product, quantity: 1 }]);
-      }else {
-         const newItems = [...items];
-         newItems[index].quantity--;
-         setItems(newItems);
-      };
+      const newItems = items.map((i) => {
+         if (i.product.id === product.id){
+            i.quantity--;
+         }
+         return i;
+      }).filter((i) => i.quantity > 0);
+      setItems(newItems);
    };
    
    return(
