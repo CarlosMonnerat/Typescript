@@ -17,9 +17,12 @@ export default function AreaItemCart(props: AreaItemCartProps){
                className="object-cover"
             />
          </div>
-         <div className="flex flex-col justify-center flex-1 ">
+         <div className="flex flex-col justify-center flex-1">
                <span className="text-xl text-cyan-50 font-bold">
                   {props.item.product.name}
+               </span>
+               <span className="text-sm text-cyan-50">
+                  {props.item.product.description}
                </span>
          </div>
          <div className="flex gap-2 items-center px-5">
