@@ -4,7 +4,7 @@ import Product from "../model/Product";
 
 interface cartContextProps {
    items: itemCart[];
-   add: (item: Product) => void   
+   toAdd: (item: Product) => void   
 };
 
 const cartContext = createContext<cartContextProps>({} as any);
