@@ -8,9 +8,12 @@ export default function CartPage() {
    
    return (
       <Page>
-         {items.map((item) => (
-            <AreaItemCart key={item.product.id} item={item}/>
-         ))}
+         <div className="flex flex-col gap-5">
+            {items.map((item) => (
+               <AreaItemCart key={item.product.id} item={item}/>
+            ))}
+         </div>
+         
       </Page>
    )
 };
