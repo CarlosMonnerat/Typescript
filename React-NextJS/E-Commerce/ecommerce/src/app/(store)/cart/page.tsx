@@ -4,7 +4,7 @@ import Page from "@/components/template/Page";
 import useCart from "@/data/hooks/useCart";
 
 export default function CartPage() {
-   const { items, toAdd } = useCart();
+   const { items, toAdd, toRemove } = useCart();
    
    return (
       <Page>
@@ -14,6 +14,7 @@ export default function CartPage() {
                   key={item.product.id}
                   item={item}
                   toAdd={(item) => toAdd(item.product)}
+                  toRemove={(item) => toRemove(item.product)}
                />
             ))}
          </div>

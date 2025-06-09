@@ -5,7 +5,8 @@ import Product from "../model/Product";
 interface cartContextProps {
    items: itemCart[];
    qtItems: number;
-   toAdd: (item: Product) => void   
+   toAdd: (item: Product) => void 
+   toRemove: (item: Product) => void  
 };
 
 const cartContext = createContext<cartContextProps>({} as any);
@@ -23,12 +24,24 @@ export function ProviderCart(props: any) {
          setItems(newItems);
       };
    };
+
+   function toRemove(product: Product){
+      const index = items.findIndex((i) => i.product.id === product.id);
+      if(index === -1) {
+         setItems([...items, { product, quantity: 1 }]);
+      }else {
+         const newItems = [...items];
+         newItems[index].quantity--;
+         setItems(newItems);
+      };
+   };
    
    return(
       <cartContext.Provider
          value={{
             items,
             toAdd,
+            toRemove,
             get qtItems() {
                return items.reduce((total, item) => total + item.quantity, 0);
             }
