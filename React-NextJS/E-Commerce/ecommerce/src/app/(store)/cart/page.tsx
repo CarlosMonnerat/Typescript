@@ -9,7 +9,7 @@ export default function CartPage() {
    return (
       <Page>
          {items.map((item) => (
-            <AreaItemCart key={item.product.id} item={item} />
+            <AreaItemCart key={item.product.id} item={item}/>
          ))}
       </Page>
    )
