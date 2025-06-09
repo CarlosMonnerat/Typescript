@@ -4,6 +4,7 @@ import Product from "../model/Product";
 
 interface cartContextProps {
    items: itemCart[];
+   qtItems: number;
    toAdd: (item: Product) => void   
 };
 
@@ -24,10 +25,14 @@ export function ProviderCart(props: any) {
    };
    
    return(
-      <cartContext.Provider value={{
-         items,
-         toAdd,
-      }}>
+      <cartContext.Provider
+         value={{
+            items,
+            toAdd,
+            get qtItems() {
+               return items.reduce((total, item) => total + item.quantity, 0);
+            }
+         }}>
          {props.children}
       </cartContext.Provider>
    )
