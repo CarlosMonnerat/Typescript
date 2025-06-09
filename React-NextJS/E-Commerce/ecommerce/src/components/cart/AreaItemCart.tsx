@@ -1,5 +1,5 @@
 import itemCart from "@/data/model/ItemCart";
-import { IconMinus, IconPlus } from "@tabler/icons-react";
+import { IconMinus, IconPlus, IconPlusEqual, IconX } from "@tabler/icons-react";
 import Image from "next/image";
 
 export interface AreaItemCartProps {
@@ -24,6 +24,15 @@ export default function AreaItemCart(props: AreaItemCartProps){
                <span className="text-sm text-cyan-50">
                   {props.item.product.description}
                </span>
+               <div className="flex items-center gap-2 mt-2 text-cyan-50 text-lg font-bold">
+                  <span>R$ {props.item.product.price.toFixed(2)}</span>
+                  <IconX size={20}/>
+                  <span>{props.item.quantity}</span>
+                  <span>=</span>
+                  <span className="text-amber-400">
+                     R$ {(props.item.product.price * props.item.quantity).toFixed(2)}
+                  </span>
+               </div>
          </div>
          <div className="flex gap-2 items-center px-5">
             <button onClick={() => {}}>
