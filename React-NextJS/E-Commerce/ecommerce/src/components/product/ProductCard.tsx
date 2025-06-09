@@ -1,3 +1,4 @@
+import useCart from "@/data/hooks/useCart";
 import Product from "@/data/model/Product";
 import Image from 'next/image';
 
@@ -6,7 +7,8 @@ export interface ProductCardProps {
 };
 
 export default function ProductCard(props: ProductCardProps) {
-   const { id, name, description, price, image} = props.product;
+   const { toAdd } = useCart();
+   const { name, description, price, image} = props.product;
 
    return (
       <div className="flex flex-col w-72 rounded-lg bg-zinc-800">
@@ -18,7 +20,7 @@ export default function ProductCard(props: ProductCardProps) {
             <p className="flex-1 text-sm">{description}</p>
             <div className="flex justify-between items-center">
                <span className="text-lg font-semibold mt-2">R${price.toFixed(2)}</span>
-               <button className="border rounded-full px-5 py-2 text-sm cursor-pointer">Adicionar</button>
+               <button onClick={() => toAdd(props.product)} className="border rounded-full px-5 py-2 text-sm cursor-pointer">Adicionar</button>
             </div>
          </div>
       </div>
