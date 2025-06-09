@@ -4,6 +4,8 @@ import Image from "next/image";
 
 export interface AreaItemCartProps {
    item: itemCart;
+   toAdd?: (Item: itemCart) => void;
+   toRemove?: (item: itemCart) => void;
 };
 
 export default function AreaItemCart(props: AreaItemCartProps){
@@ -35,14 +37,14 @@ export default function AreaItemCart(props: AreaItemCartProps){
                </div>
          </div>
          <div className="flex gap-2 items-center px-5">
-            <button onClick={() => {}}>
-               <IconMinus className="text-cyan-50"/>
+            <button className="cursor-pointer" onClick={() => props.toRemove?.(props.item)}>
+               <IconMinus className="text-cyan-50 hover:text-cyan-400"/>
             </button>
             <span className="flex px-4 py-2 rounded-md bg-cyan-50">
                {props.item.quantity}
             </span>
-            <button onClick={() => {}}>
-               <IconPlus className="text-cyan-50"/>
+            <button className="cursor-pointer" onClick={() => props.toAdd?.(props.item)}>
+               <IconPlus className="text-cyan-50 hover:text-cyan-400"/>
             </button>
          </div>
 
