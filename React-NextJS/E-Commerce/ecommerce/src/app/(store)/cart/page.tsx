@@ -9,7 +9,7 @@ export default function CartPage() {
    const { items, toAdd, toRemove } = useCart();
    
    return (
-      <Page>
+      <Page className="flex flex-col gap-10">
          {items.length === 0 ? (
             <EmptyCart/>
          ) : (
@@ -22,11 +22,11 @@ export default function CartPage() {
                         toAdd={(item) => toAdd(item.product)}
                         toRemove={(item) => toRemove(item.product)}
                      />
-                  ))};
+                  ))}
                </div>
                <TotalCart items={items}/>
             </>
-         )};  
+         )}  
       </Page>
    )
 };

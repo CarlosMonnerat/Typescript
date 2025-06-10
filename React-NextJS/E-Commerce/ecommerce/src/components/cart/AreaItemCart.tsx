@@ -47,7 +47,6 @@ export default function AreaItemCart(props: AreaItemCartProps){
                <IconPlus className="text-cyan-50 hover:text-cyan-400"/>
             </button>
          </div>
-
       </div>
    )
 };
