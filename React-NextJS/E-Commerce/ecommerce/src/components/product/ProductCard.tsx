@@ -19,7 +19,7 @@ export default function ProductCard(props: ProductCardProps) {
             <h2 className="text-xl font-bold ">{name}</h2>
             <p className="flex-1 text-sm">{description}</p>
             <div className="flex justify-between items-center">
-               <span className="text-lg font-semibold mt-2">R${price.toFixed(2)}</span>
+               <span className="text-lg text-amber-400 font-semibold mt-2">R${price.toFixed(2)}</span>
                <button onClick={() => toAdd(props.product)} className="border rounded-full px-5 py-2 text-sm cursor-pointer hover:bg-zinc-700">Adicionar</button>
             </div>
          </div>
