@@ -1,6 +1,7 @@
 'use client';
 import AreaItemCart from "@/components/cart/AreaItemCart";
 import EmptyCart from "@/components/cart/EmptyCart";
+import TotalCart from "@/components/cart/TotalCart";
 import Page from "@/components/template/Page";
 import useCart from "@/data/hooks/useCart";
 
@@ -12,16 +13,19 @@ export default function CartPage() {
          {items.length === 0 ? (
             <EmptyCart/>
          ) : (
-            <div className="flex flex-col gap-5">
-               {items.map((item) => (
-                  <AreaItemCart 
-                     key={item.product.id}
-                     item={item}
-                     toAdd={(item) => toAdd(item.product)}
-                     toRemove={(item) => toRemove(item.product)}
-                  />
-               ))};
-            </div>
+            <>
+               <div className="flex flex-col gap-5">
+                  {items.map((item) => (
+                     <AreaItemCart 
+                        key={item.product.id}
+                        item={item}
+                        toAdd={(item) => toAdd(item.product)}
+                        toRemove={(item) => toRemove(item.product)}
+                     />
+                  ))};
+               </div>
+               <TotalCart items={items}/>
+            </>
          )};  
       </Page>
    )
