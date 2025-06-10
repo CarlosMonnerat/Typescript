@@ -10,8 +10,8 @@ export default function EmptyCart() {
             <p>Adicione produtos clicando no botão abaixo</p>
          </div>
          <Link href="/" className="bg-zinc-800 rounded-xl px-3 py-2">
-               Ver produtos
-         </Link>
+            Ver produtos
+         </Link>   
       </div>
    )
 };
