@@ -10,8 +10,3 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
-
-.btnTotal:hover{
-  background-color: green;
-  border: 1px solid white;
-}
