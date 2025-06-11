@@ -1,4 +1,4 @@
-import { createContext, useState } from "react";
+import { createContext, useEffect, useState } from "react";
 import itemCart from "../model/ItemCart";
 import Product from "../model/Product";
 import useLocalStorage from "../hooks/useLocalStorage";
@@ -16,6 +16,13 @@ const cartContext = createContext<cartContextProps>({} as any);
 export function ProviderCart(props: any) {
    const [items, setItems] = useState<itemCart[]>([]);
    const { set, get } = useLocalStorage();
+
+   useEffect(() => {
+      const cart = get("cart");
+      if(cart) {
+         setItems(cart);
+      };
+   }, [get]);
 
    function toAdd(product: Product) {
       const index = items.findIndex((i) => i.product.id === product.id);

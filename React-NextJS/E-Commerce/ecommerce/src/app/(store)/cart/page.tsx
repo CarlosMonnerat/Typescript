@@ -4,6 +4,7 @@ import EmptyCart from "@/components/cart/EmptyCart";
 import TotalCart from "@/components/cart/TotalCart";
 import Page from "@/components/template/Page";
 import useCart from "@/data/hooks/useCart";
+import Link from "next/link";
 
 export default function CartPage() {
    const { items, toAdd, toRemove } = useCart();
@@ -24,6 +25,7 @@ export default function CartPage() {
                      />
                   ))}
                </div>
+               <Link href={"/"} className="font-bold text-red-600 text-center hover:text-green-800 hover:underline">Adicionar mais produtos</Link>
                <TotalCart items={items}/>
             </>
          )}  
