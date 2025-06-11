@@ -1,6 +1,8 @@
 import { createContext, useState } from "react";
 import itemCart from "../model/ItemCart";
 import Product from "../model/Product";
+import useLocalStorage from "../hooks/useLocalStorage";
+import { News_Cycle } from "next/font/google";
 
 interface cartContextProps {
    items: itemCart[];
@@ -13,15 +15,16 @@ const cartContext = createContext<cartContextProps>({} as any);
 
 export function ProviderCart(props: any) {
    const [items, setItems] = useState<itemCart[]>([]);
+   const { set, get } = useLocalStorage();
 
    function toAdd(product: Product) {
       const index = items.findIndex((i) => i.product.id === product.id);
       if(index === -1) {
-         setItems([...items, { product, quantity: 1 }]);
+         changeItems([...items, { product, quantity: 1 }]);
       }else {
          const newItems = [...items];
          newItems[index].quantity++;
-         setItems(newItems);
+         changeItems(newItems);
       };
    };
 
@@ -32,7 +35,12 @@ export function ProviderCart(props: any) {
          }
          return i;
       }).filter((i) => i.quantity > 0);
+      changeItems(newItems);
+   };
+
+   function changeItems(newItems: itemCart[]) {
       setItems(newItems);
+      set('cart', newItems);
    };
    
    return(
