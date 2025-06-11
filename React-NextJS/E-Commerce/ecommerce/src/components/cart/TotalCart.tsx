@@ -12,8 +12,7 @@ export default function TotalCart(props: TotalCartProps) {
             <span>Total</span>
             <span className="text-3xl font-bold text-green-500">R$ {total.toFixed(2)}</span>
          </div>
-         <button className="bg-green-600 font-bold px-5 py-2 rounded-md cursor-pointer">Finalizar</button>
-
+         <button className="bg-green-600 font-bold px-5 py-2 rounded-md cursor-pointer hover:bg-green-700 hover:border border-white">Finalizar</button>
       </div>
    )
 };

@@ -9,7 +9,7 @@ export default function EmptyCart() {
             <h2 className="text-3xl">Seu carrinho está vazio</h2>
             <p>Adicione produtos clicando no botão abaixo</p>
          </div>
-         <Link href="/" className="bg-zinc-800 border border-cyan-50 rounded-md px-4 py-2">
+         <Link href="/" className="bg-zinc-800 border-1 border-zinc-800 rounded-md px-4 py-2 hover:bg-zinc-900 hover:border-1 hover:border-white">
             Ver produtos
          </Link>   
       </div>
